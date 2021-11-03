@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
 // let loanYearsElement = document.getElementById("loan-years");
 // let loanRateElement = document.getElementById("loan-rate");
 
-// !!!!! CAN THE FOLLOWING LINE BE REPLACED?
+// ?????? CAN THE FOLLOWING LINE BE REPLACED? why is it necessary when declaring monthlyPayment (see above) is not?
 let monthlyPaymentElement = document.getElementById("monthly-payment");
 
 
@@ -58,9 +58,14 @@ function update() {
 // calculate the monthly payment.  The output should be a string
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
+  // if (Object.values(values).includes(0)) {
+  //   alert('NEITHER THE LOAN AMOUNT NOR THE LOAN TERM CAN BE 0')
+  // }
+  // else {
   monthlyPayment = (loanAmount * (loanRate / 12)) / (1 - (1 + loanRate / 12) ** (loanYears * 12 * -1))
   monthlyPayment = monthlyPayment.toFixed(2)
 }
+// }
 
 // Given a string representing the monthly payment value,
 // update the UI to show the value.
