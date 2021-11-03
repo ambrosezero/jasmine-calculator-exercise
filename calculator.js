@@ -10,15 +10,16 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-let loanAmount = "1000";
-let loanYears = "2";
-let loanRate = "10";
-let monthlyPayment = ""
+// let loanAmount = "1000";
+// let loanYears = "2";
+// let loanRate = "10";
+// ????? WHY DO I NOT NEED TO DECLARE monthlyPayment as a variable? it is used in later fxns
+// let monthlyPayment = ""
 
 // !!!!! CONSIDER NIXING THE FOLLOWING 3 LINES
-let loanAmountElement = document.getElementById("loan-amount");
-let loanYearsElement = document.getElementById("loan-years");
-let loanRateElement = document.getElementById("loan-rate");
+// let loanAmountElement = document.getElementById("loan-amount");
+// let loanYearsElement = document.getElementById("loan-years");
+// let loanRateElement = document.getElementById("loan-rate");
 
 // !!!!! CAN THE FOLLOWING LINE BE REPLACED?
 let monthlyPaymentElement = document.getElementById("monthly-payment");
@@ -47,6 +48,7 @@ function setupIntialValues() {
 // Update the monthly payment
 function update() {
   getCurrentUIValues();
+  setupIntialValues();
   calculateMonthlyPayment();
   updateMonthly();
 
