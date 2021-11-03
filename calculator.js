@@ -10,9 +10,9 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// let loanAmount = "1000";
-// let loanYears = "2";
-// let loanRate = "10";
+let loanAmount = "1000";
+let loanYears = "2";
+let loanRate = "10";
 // ????? WHY DO I NOT NEED TO DECLARE monthlyPayment as a variable? it is used in later fxns
 // let monthlyPayment = ""
 
@@ -39,8 +39,8 @@ function getCurrentUIValues() {
 // Call a function to calculate the current monthly payment
 function setupIntialValues() {
   loanAmount = getCurrentUIValues().amount;
-  loanYears = getCurrentUIValues().years;
   loanRate = getCurrentUIValues().rate;
+  loanYears = getCurrentUIValues().years;
   calculateMonthlyPayment()
 }
 
