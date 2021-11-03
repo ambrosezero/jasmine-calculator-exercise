@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById("calc-form");
+  // ???? WHAT DOES "IF (FORM)" DO IN THIS CONTEXT? LINE 4
   if (form) {
     setupIntialValues();
     form.addEventListener("submit", function (e) {
@@ -14,10 +15,12 @@ let loanYears = "2";
 let loanRate = "10";
 let monthlyPayment = ""
 
-
+// !!!!! CONSIDER NIXING THE FOLLOWING 3 LINES
 let loanAmountElement = document.getElementById("loan-amount");
 let loanYearsElement = document.getElementById("loan-years");
 let loanRateElement = document.getElementById("loan-rate");
+
+// !!!!! CAN THE FOLLOWING LINE BE REPLACED?
 let monthlyPaymentElement = document.getElementById("monthly-payment");
 
 
