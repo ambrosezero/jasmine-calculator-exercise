@@ -14,15 +14,11 @@ let loanYears = "2";
 let loanRate = "10";
 let monthlyPayment = ""
 
-// ?????  line 22 and 23 below fail in script, but work as desired when copy pasted directly into console
 
 let loanAmountElement = document.getElementById("loan-amount");
 let loanYearsElement = document.getElementById("loan-years");
 let loanRateElement = document.getElementById("loan-rate");
 let monthlyPaymentElement = document.getElementById("monthly-payment");
-monthlyPaymentElement.textContent = "200";
-
-
 
 
 
@@ -57,15 +53,8 @@ function update() {
 // calculate the monthly payment.  The output should be a string
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
-  console.log(loanAmount)
-  console.log(loanYears)
-  console.log(loanRate)
-
-  console.log(monthlyPayment)
   monthlyPayment = (loanAmount * (loanRate / 12)) / (1 - (1 + loanRate / 12) ** (loanYears * 12 * -1))
-  console.log(monthlyPayment)
   monthlyPayment = monthlyPayment.toFixed(2)
-  console.log(monthlyPayment)
 }
 
 // Given a string representing the monthly payment value,
