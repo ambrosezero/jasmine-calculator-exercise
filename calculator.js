@@ -10,9 +10,9 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-let loanAmount = "1000";
-let loanYears = "2";
-let loanRate = "10";
+// let loanAmount = "1000";
+// let loanYears = "2";
+// let loanRate = "10";
 // ????? WHY DO I NOT NEED TO DECLARE monthlyPayment as a variable? it is used in later fxns
 // let monthlyPayment = ""
 
@@ -41,7 +41,6 @@ function setupIntialValues() {
   loanAmount = getCurrentUIValues().amount;
   loanRate = getCurrentUIValues().rate;
   loanYears = getCurrentUIValues().years;
-  calculateMonthlyPayment()
 }
 
 // Get the current values from the UI
@@ -57,7 +56,7 @@ function update() {
 // Given an object of values (a value has amount, years and rate ),
 // calculate the monthly payment.  The output should be a string
 // that always has 2 decimal places.
-function calculateMonthlyPayment(values) {
+function calculateMonthlyPayment() {
   // if (Object.values(values).includes(0)) {
   //   alert('NEITHER THE LOAN AMOUNT NOR THE LOAN TERM CAN BE 0')
   // }
