@@ -49,7 +49,7 @@ describe('calculateMonthlyPayment', () => {
   //   loanAmount: Math.random() * 100, loanYears: Math.random() * 10, loanRate: Math.random()
   // }
 
-  // ???????having trouble passing values into the following function
+  // ??????? having trouble passing values into the following function
   it('should calculate the monthly rate correctly', function () {
     let loanAmount = 100; let loanYears = 1; let loanRate = 0.20;
     expect(calculateMonthlyPayment()).toEqual(9.26)
