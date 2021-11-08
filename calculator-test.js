@@ -63,6 +63,13 @@ describe('calculateMonthlyPayment', () => {
     // expect(calculateMonthlyPayment(testValues3)).toEqual(9.26)
     // expect(calculateMonthlyPayment(testValues4)).toEqual(9.26)
 
+    document.getElementById("loan-amount").value = 2000;
+    document.getElementById("loan-years").value = 5;
+    document.getElementById("loan-rate").value = 0.15;
+    setupIntialValues()
+    // the following only works if the expected argument is passed as a string
+    expect(calculateMonthlyPayment()).toEqual('47.58')
+
   })
 
 
