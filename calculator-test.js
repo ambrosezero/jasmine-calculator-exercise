@@ -35,7 +35,7 @@ describe('update', () => {
 
 describe('calculateMonthlyPayment', () => {
 
-  // the following values and objects exist for testing purposes only
+  // the following values and objects exist for testing purposes
   // const testValues1 = {
   //   loanAmount: 100, loanYears: 1, loanRate: 0.20,
   // }
@@ -51,7 +51,11 @@ describe('calculateMonthlyPayment', () => {
 
   // ??????? having trouble passing values into the following function
   it('should calculate the monthly rate correctly', function () {
-    let loanAmount = 100; let loanYears = 1; let loanRate = 0.20;
+
+    // let loanAmount = 100; let loanYears = 1; let loanRate = 0.20;
+    document.getElementById("loan-amount").value = 100;
+    document.getElementById("loan-years").value = 1;
+    document.getElementById("loan-rate").value = 0.20;
     expect(calculateMonthlyPayment()).toEqual(9.26)
     // expect(calculateMonthlyPayment(testValues2)).toEqual(9.26)
     // expect(calculateMonthlyPayment(testValues3)).toEqual(9.26)
