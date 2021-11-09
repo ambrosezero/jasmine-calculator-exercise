@@ -62,7 +62,7 @@ function calculateMonthlyPayment() {
   // }
   // else {
   monthlyPayment = (loanAmount * (loanRate / 12)) / (1 - (1 + loanRate / 12) ** (loanYears * 12 * -1))
-  monthlyPayment = monthlyPayment.toFixed(2)
+  monthlyPayment = parseFloat(monthlyPayment.toFixed(2));
   return monthlyPayment
 }
 // }

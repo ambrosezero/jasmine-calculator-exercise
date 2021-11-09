@@ -1,56 +1,37 @@
 
-
-
-
 describe('getCurrentUIValues', () => {
-  // it('should retrieve the current values in the UI', function () {
-  //   // ...
-  //   expect((getCurrentUIValues().amount).not.toBefalsy())
-  // });
-
-
-  // it("", function () {
-  //   // ..
-  // });
+  it('should execute without throwing error', function () {
+    expect(() => {
+      getCurrentUIValues()
+    }).not.toThrowError();
+  })
+  // ????? ANY OTHER TEST I CAN THINK OF WOULD BE REDUNDANT
 })
-/// etc
+
 
 describe('setUpInitialValues', () => {
-
-
-
-})
-
-describe('update', () => {
-
-
+  it('should execute without throwing an error', function () {
+    expect(() => {
+      setupIntialValues();
+    }).not.toThrowError();
+  })
 
 })
 
 describe('update', () => {
-
-
+  // checks to see if update() throws an error
+  it('should execute its nested functions without throwing error', function () {
+    expect(() => {
+      update()
+    }).not.toThrowError();
+  })
 
 })
 
 describe('calculateMonthlyPayment', () => {
 
-  // the following values and objects exist for testing purposes
-  // const testValues1 = {
-  //   loanAmount: 100, loanYears: 1, loanRate: 0.20,
-  // }
-  // const testValues2 = {
-  //   loanAmount: 100, loanYears: 0, loanRate: 0.20,
-  // }
-  // const testValues3 = {
-  //   loanAmount: 0, loanYears: 1, loanRate: 0.20,
-  // }
-  // const testValues4 = {
-  //   loanAmount: Math.random() * 100, loanYears: Math.random() * 10, loanRate: Math.random()
-  // }
-
-  // ??????? having trouble passing values into the following function
-  it('should calculate the monthly rate correctly', function () {
+  // ????? IS IT OK TO COMBINE THINGS TO CHECK, I.E. THE FOLLOWING FUNCTION WHICH CHECKS CORRECTNESS AND DECIMAL PLACES?
+  it('should calculate the monthly rate correctly with 2 decimal places', function () {
 
     // let loanAmount = 100; let loanYears = 1; let loanRate = 0.20;
     document.getElementById("loan-amount").value = 100;
@@ -58,28 +39,19 @@ describe('calculateMonthlyPayment', () => {
     document.getElementById("loan-rate").value = 0.20;
     setupIntialValues()
     // the following only works if the expected argument is passed as a string
-    expect(calculateMonthlyPayment()).toEqual('9.26')
-    // expect(calculateMonthlyPayment(testValues2)).toEqual(9.26)
-    // expect(calculateMonthlyPayment(testValues3)).toEqual(9.26)
-    // expect(calculateMonthlyPayment(testValues4)).toEqual(9.26)
+    expect(calculateMonthlyPayment()).toEqual(9.26)
+
 
     document.getElementById("loan-amount").value = 2000;
     document.getElementById("loan-years").value = 5;
     document.getElementById("loan-rate").value = 0.15;
     setupIntialValues()
     // the following only works if the expected argument is passed as a string
-    expect(calculateMonthlyPayment()).toEqual('47.58')
+    expect(calculateMonthlyPayment()).toEqual(47.58)
 
   })
 
 
-  // it('should return a result with 2 decimal places', function () {
-  //   expect(calculateMonthlyPayment(testValues1))
-  // })
-})
-
-describe('update', () => {
-
-
 
 })
+
