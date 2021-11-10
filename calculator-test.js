@@ -50,8 +50,12 @@ describe('calculateMonthlyPayment', () => {
     expect(calculateMonthlyPayment()).toEqual(47.58)
 
   })
+})
 
-
-
+afterEach(() => {
+  document.getElementById("loan-amount").value = 1000;
+  document.getElementById("loan-years").value = 2;
+  document.getElementById("loan-rate").value = 0.1;
+  monthlyPaymentElement.textContent = ""
 })
 
