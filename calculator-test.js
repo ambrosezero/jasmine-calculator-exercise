@@ -30,24 +30,11 @@ describe('update', () => {
 
 describe('calculateMonthlyPayment', () => {
 
-  // ????? IS IT OK TO COMBINE THINGS TO CHECK, I.E. THE FOLLOWING FUNCTION WHICH CHECKS CORRECTNESS AND DECIMAL PLACES?
   it('should calculate the monthly rate correctly with 2 decimal places', function () {
 
-    // let loanAmount = 100; let loanYears = 1; let loanRate = 0.20;
-    document.getElementById("loan-amount").value = 100;
-    document.getElementById("loan-years").value = 1;
-    document.getElementById("loan-rate").value = 0.20;
-    setupIntialValues()
-    // the following only works if the expected argument is passed as a string
-    expect(calculateMonthlyPayment()).toEqual(9.26)
+    expect(calculateMonthlyPayment(100, 1, 0.20)).toEqual(9.26)
 
-
-    document.getElementById("loan-amount").value = 2000;
-    document.getElementById("loan-years").value = 5;
-    document.getElementById("loan-rate").value = 0.15;
-    setupIntialValues()
-    // the following only works if the expected argument is passed as a string
-    expect(calculateMonthlyPayment()).toEqual(47.58)
+    expect(calculateMonthlyPayment(2000, 5, 0.15)).toEqual(47.58)
 
   })
 })
